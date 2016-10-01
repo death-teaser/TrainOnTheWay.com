@@ -1,0 +1,98 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="moonstick no-js laterooms home">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="language" http-equiv="Content-Language" content="en" />
+    <script src="{% static 'js/1.js' %}"></script>
+    <script src="{% static 'js/2.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/1.css' %}">
+    <link rel="stylesheet" href="{% static 'js/2.css' %}">
+
+    <script src="{% static 'js/3.js' %}"></script>
+</head>
+
+<body data-pagetype="home">
+    
+ <section class="above-fold">
+
+        <nav class="main-nav">
+    <ul class="main-nav__desktop">
+            <li><i class="icon-phone"></i><a     ><font color="red">+918057683190</font></a></li>
+            <li><a href="/" title="Home"   data-track="about_us"><b>Home</b></a></li>
+            <li> <a  href="/Developers/" ><b>Developers</b></a></li>
+            <li><a href="/admin/"><b>Admin Login</b></a></li>
+    </ul>
+</nav>
+<div class="container home-page">
+	<style>
+	    @media (min-width: 768px) {
+	        .above-fold {
+	            background-image: url({% static 'img/rail.jpg' %});
+	            transition: background-image 0.5s ease-in;
+	        }
+
+	        .above-fold--loaded {
+	            background-image: url({% static 'img/rail.jpg' %});
+	            transition: background-image 0.5s ease-in;
+	        }
+	    }
+	</style>
+
+	<div id="bg-fullsize" data-src="{% static 'img/rail.jpg' %}"></div>
+	<div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+			<form id="search-bar-form" class="searchBarNew stacked "  action="/index2/" method="POST">
+			    {% csrf_token %}
+			    <div class="searchbar form-group col-sm-12 col-md-12">
+			        <input name="number" class="form-control destination" type="text" placeholder="Enter train number" value="" data-prefill-with-destination="false" autofocus/>
+			    </div>
+			    <div class="searchbar form-group col-sm-12 col-md-6">
+    				<input name="class" class="form-control destination" type="text" placeholder="class" value="" data-prefill-with-destination="false" autofocus/>
+			    </div>
+			    <div class="searchbar form-group col-sm-12 col-md-6">
+			    	<input name="quota" class="form-control destination" type="text" placeholder="quota" value="" data-prefill-with-destination="false" autofocus/>
+			    </div>
+			    <div class="form-group col-md-offset-4 col-sm-offset-4 col-sm-4 col-md-4 search-button-wrapper">
+			        <button class="btn btn--cta btn--lg btn--block" type="submit">Search</button>
+			    </div>
+			</form>
+        </div>
+    </div>
+</div>
+ 
+<section class="footer">
+    <div class="container">
+        <br>
+        <div class="jumbotron">
+            <p id="p01" style="font-family:Matura MT Script Capitals"><font size="32">Train available </font></p>
+		        {% for dic in data.0 %}
+		        <ul style="text-align:center;">	{% for key,value in dic.items %}
+		        		{% if  key == "travel_time" %}
+		        		<li><b> * Travel time : </b>{{ value }}</li>
+		        		{% elif key ==  "src_departure_time" %}
+		        		<b>Departure time : </b>{{ value }}
+		        		{% elif key ==  "from" %}
+		        		<b>From : </b>{{ value }}
+		        		{% elif  key == "name" %}
+		        		<li><b>Name : </b>{{ value }}</li>
+		        		{% elif key ==  "dest_arrival_time" %}
+		        		<b>Destination arrival time : </b>{{ value }}
+		        		{% elif key ==  "number" %}
+		        		<b>Train no : </b>{{ value }}
+		        		{% elif key ==  "to" %}
+		        		<b>To : </b>{{ value }}
+		        		{% endif %}
+		        	{% endfor %}</ul><br>
+		        {% endfor %}
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+         <p style="text-align:center;"><b>Copyright © death_teaser</b></p>
+</section>
+</section>
+</body>
+</html>

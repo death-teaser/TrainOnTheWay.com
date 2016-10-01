@@ -1,0 +1,66 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="moonstick no-js laterooms home">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="language" http-equiv="Content-Language" content="en" />
+    <script src="{% static 'js/1.js' %}"></script>
+    <script src="{% static 'js/2.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/1.css' %}">
+    <link rel="stylesheet" href="{% static 'js/2.css' %}">
+
+    <script src="{% static 'js/3.js' %}"></script>
+</head>
+
+<body data-pagetype="home">
+    
+ <section class="above-fold">
+
+        <nav class="main-nav">
+    <ul class="main-nav__desktop">
+            <li><i class="icon-phone"></i><a     ><font color="red">+918057683190</font></a></li>
+            <li><a href="/" title="Home"   data-track="about_us"><b>Home</b></a></li>
+            <li> <a  href="/Developers/" ><b>Developers</b></a></li>
+            <li><a href="/admin/"><b>Admin Login</b></a></li>
+    </ul>
+</nav>
+<div class="container home-page">
+	<style>
+	    @media (min-width: 768px) {
+	        .above-fold {
+	            background-image: url({% static 'img/rail.jpg' %});
+	            transition: background-image 0.5s ease-in;
+	        }
+
+	        .above-fold--loaded {
+	            background-image: url({% static 'img/rail.jpg' %});
+	            transition: background-image 0.5s ease-in;
+	        }
+	    }
+	</style>
+
+	<div id="bg-fullsize" data-src="{% static 'img/rail.jpg' %}"></div>
+
+</div>
+ 
+<section class="footer">
+    <div class="container">
+        <br>
+        <div class="jumbotron">
+            <p id="p01" style="font-family:Matura MT Script Capitals"><font size="32">Route of the train </font></p>
+          {% for i in route %}
+         	<li><b>Station and code : </b>{{ i.0 }}  <b> ( {{ i.1 }} )</b></li>
+         {% endfor %}
+         <h1 style="text-align:center;">{{ availability.0 }}</h1>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+         <p style="text-align:center;"><b>Copyright © death_teaser</b></p
+
+</section>
+</section>
+</body>
+</html>

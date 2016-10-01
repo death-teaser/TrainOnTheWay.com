@@ -1,0 +1,111 @@
+{% load static %}
+<!doctype html>
+<html class="moonstick no-js laterooms home">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="language" http-equiv="Content-Language" content="en" />
+    <script src="{% static 'js/1.js' %}"></script>
+    <script src="{% static 'js/2.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/2.css' %}">
+
+    <script src="{% static 'js/3.js' %}"></script>
+</head>
+
+<body data-pagetype="home">
+ <section class="above-fold">
+
+            <nav class="main-nav">
+    <ul class="main-nav__desktop">
+            <li><i class="icon-phone"></i><a><font color="red">+918057683190</font></a></li>
+            <li><a href="/about-us/" title="About Us"   data-track="about_us"><b>About Us</b></a></li>
+            <li> <a  href="/Developers/" ><b>Developers</b></a></li>
+       
+    </ul>
+</nav>
+
+
+
+
+        <div class="container home-page">
+
+            <div class="logo-new">
+    <div class="logo-new__subtitle">
+    <p><font size="32"><b>TrainOnTheWay.Com</b></font></p>
+
+       <p> Have a nyc journey</p>
+    </div>
+</div>
+<style>
+    @media (min-width: 768px) {
+        .above-fold {
+            background-image: url({% static 'img/rail.jpg' %});
+            transition: background-image 0.5s ease-in;
+        }
+
+        .above-fold--loaded {
+            background-image: url({% static 'img/rail.jpg' %});
+            transition: background-image 0.5s ease-in;
+        }
+    }
+</style>
+
+<div id="bg-fullsize" data-src="{% static 'img/rail.jpg' %}"></div>
+
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    
+
+<form id="search-bar-form" class="searchBarNew stacked "  action="/index/" method="POST">
+    {% csrf_token %}
+    <div class="searchbar form-group col-sm-12 col-md-12">
+        <input name="date" class="form-control destination" type="text" placeholder="Enter the date" value="" data-prefill-with-destination="false" autofocus/>
+    </div>
+    <div class="searchbar form-group col-sm-12 col-md-6">
+    	<input name="source_code" class="form-control destination" type="text" placeholder="Src code" value="" data-prefill-with-destination="false" autofocus/>
+    </div>
+    <div class="searchbar form-group col-sm-12 col-md-6">
+    	<input name="dest_code" class="form-control destination" type="text" placeholder="Dest Code" value="" data-prefill-with-destination="false" autofocus/>
+    </div>
+    <div class="form-group col-md-offset-4 col-sm-offset-4 col-sm-4 col-md-4 search-button-wrapper">
+        <button class="btn btn--cta btn--lg btn--block" type="submit">Search</button>
+    </div>
+</form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <ul class="home-text">
+        <li class="icon-checkmark">Save your time <span>& money</span></li>
+</ul>
+
+    <section class="footer">
+        <div class="container">
+        <br>
+        <div class="jumbotron">
+            <p id="p01" style="font-family:Matura MT Script Capitals"><font size="32">IndianRail</font></p>
+            <blockquote>
+            <p>“I believe when life gives you lemons, you should make lemonade...and try to find someone whose life has given them vodka, and have a party.”  </p><p style="text-align:center">
+            <footer style="font-size:17px">   ― Ron White  </footer>
+          </blockquote>
+      </div>
+      <br>
+      <br>
+        <h4>About Indian Railway</h4>
+        <br>
+<blockquote>Indian Railways is the world's seventh largest commercial or utility employer, by number of employees, with over 1.376 million employees as of last published figures in 2013. IR's rolling stock comprises over 245,267 Freight Wagons, 66,392 Passenger Coaches and 10,499 Locomotives (43 steam, 5,633 diesel and 4,823 electric locomotives).[3] The trains have a 5 digit numbering system and runs 12,617 passenger trains and 7,421 freight trains daily.As of 31 March 2016, 27,999 km (17,398 mi) (41.59%) of the total 67,312 km (41,826 mi) route length was electrified.Since 1960, almost all electrified sections on IR use 25,000 Volt AC traction through overhead catenary of delivery.</blockquote>
+<br>
+<br>
+<br>
+
+    </ul>
+     <p style="text-align:center;"><b>Copyright © death_teaser Initiative</b></p>
+    </div>
+    </section>
+</body>
+
+</html>

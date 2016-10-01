@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'bootstrap-3.3.5-dist/css/bootstrap.min.css' %}">
+  <script src="jquery.min.js"></script>
+  <script src="{% static 'bootstrap-3.3.5-dist/js/bootstrap.js' %}"></script>
+  
+</head>
+
+<body style="background-color:black">
+<style>
+p.contact{
+    position:fixed;
+    bottom:10px;
+    right:0px;
+    height:20px;
+    width:250px;
+    background-color:'black'; 
+}
+</style>
+  <div class="container" width:100%; height:400px>
+    <img src="{% static 'img/developer-bg.jpg' %}" alt="Why So Serious ? ( Joker )" width="100%"; height="300px">
+  </div>
+  <br><br><br>
+  <section class="grigio">
+  <div class="container">
+
+
+      <div class="col-sm-12">
+        <div class="media">
+          <div class="row ">
+            <div class="media-img  pull-center   col-md-offset-5 col-sm-offset-4 col-sm-4 col-md-4 ">
+             <a href="https://www.facebook.com/abhishek.singhal.58958"><img src="{% static 'img/Abhishek Singhal.jpg' %}" class="img-circle" alt="Abhishek Singhal" width="180" height="180"> </div>
+             <div class="media-body  col-md-offset-5 col-sm-offset-4 col-sm-4 col-md-4"><br>
+              <a href="https://www.facebook.com/abhishek.singhal.58958"><h4 class="media-heading" style="color:white;font-family:Lucida Calligraphy;">Abhishek Singhal</h4></a>
+              
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="contact"><a href='/index/'><strong>Home</strong></a></p>
+
+    
+
+  </div>
+</section>
