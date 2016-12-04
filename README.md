@@ -8,3 +8,11 @@ This website provides you to find maximum probability to find ticket in any clas
 It's quite intresting to see when irctc is not going to provide a confirm seat but this website can.
 
 do u want to try once ......
+ 
+Technology used:
+Python 2.7
+djanog 1.8
+HTML
+CSS
+JavaScript
+
